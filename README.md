@@ -1,9 +1,9 @@
 PHP based URI proxy
 ================================================
-# what
+# What
 It's a simple local proxy server to avoid CORS issues while developing locally, should work out of the box ;)
 
-# why
+# Why
 
 for all those who are fed up with CORS, when they develop thier project and dont have influence of the Origin flag this is their salvation.
 
@@ -12,14 +12,12 @@ It's React based local server that listens on a specified port and proxies out a
 
 ## Installing via Composer
 
-The recommended way to install Guzzle is through [Composer](http://getcomposer.org).
-
 ```bash
 # Install Composer
 git clone
 
 curl -sS https://getcomposer.org/installer | php
-cd directory
+cd proxy
 php composer.phar install
 php server.php
 ```
