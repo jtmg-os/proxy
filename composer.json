@@ -1,0 +1,16 @@
+{
+    "name": "jtrefon/phpproxy",
+    "description": "Proxy server written in PHP to locally bypass CORS issue in development",
+    "require": {
+        "guzzlehttp/guzzle": "dev-master",
+        "react/react": "^0.4.2"
+    },
+    "license": "GPL-3",
+    "authors": [
+        {
+            "name": "Jacek Trefon",
+            "email": "jack@trefon.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
