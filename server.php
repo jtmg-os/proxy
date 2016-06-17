@@ -59,4 +59,5 @@ $http = new HttpServer($socket);
 $http->on('request', $app);
 
 $socket->listen(1337);
+echo "server is now listening for calls..."
 $loop->run();
