@@ -15,9 +15,10 @@ It's React based local server that listens on a specified port and proxies out a
 ```bash
 # Install Composer
 git clone https://github.com/jtmg-os/proxy.git
+cd proxy
 
 curl -sS https://getcomposer.org/installer | php
-cd proxy
+
 php composer.phar install
 php server.php
 ```
