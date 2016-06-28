@@ -1,0 +1,6 @@
+<?php
+return [
+    'port' => 1337,
+    'destinationUrl' => 'https://www.google.com',
+    'corsOrigin' => '*'
+];

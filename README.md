@@ -26,9 +26,9 @@ php server.php
 After installing, you need to configure it a bit, its messy at this point but this is first draft ;-)
 
 ```php
-$destinationUrl = 'http://www.google.com'; //clearly your destination url
-$cors = '*'; // CORS overwrite, feel free to leave it open like this or set to your specific or even mess around
-$socket->listen(1337); // this is where you can overwrite the default port, go nuts ;)
+destinationUrl => 'http://www.google.com' //clearly your destination url
+corsOrigin => '*' // CORS overwrite, feel free to leave it open like this or set to your specific or even mess around
+port => '1337' // this is where you can overwrite the default port, go nuts ;)
 
 ```
 ## Known Issues

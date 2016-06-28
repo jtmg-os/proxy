@@ -27,29 +27,34 @@ use React\Http\Request;
 use React\Http\Response;
 use GuzzleHttp\Client;
 
+
+
 $app = function (Request $request, Response $response) {
-
-    $destinationUrl = 'http://www.google.com';
-    $cors = '*';
-
+    $config = include 'config.php';
     $query = $request->getQuery();
 
-    $path = $destinationUrl . $request->getPath();
+    $path = $config['destinationUrl'] . $request->getPath();
     if (count($query) > 0) {
-        $path = $destinationUrl
+        $path = $config['destinationUrl']
             . $request->getPath()
             . '?'
             . http_build_query($query);
     }
 
+try {
     $guzzleClient = new Client();
-    $guzzleResponse = $guzzleClient->request($request->getMethod(), $path);
+    $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path));
 
-    $headers = array('Origin' => $cors,
+    $headers = array('Access-Control-Allow-Origin' => $config['corsOrigin'],
         'Content-Type' => $guzzleResponse->getHeaderLine('content-type'));
 
     $response->writeHead($guzzleResponse->getStatusCode(), $headers);
     $response->end($guzzleResponse->getBody());
+
+} catch (\Exception $e) {
+echo "\nError: ".$e->getMessage();
+}
+
 };
 
 $loop = Factory::create();
@@ -57,7 +62,8 @@ $socket = new SocketServer($loop);
 $http = new HttpServer($socket);
 
 $http->on('request', $app);
-
-$socket->listen(1337);
-echo "server is now listening for calls...";
+$config = include 'config.php';
+$socket->listen($config['port']);
+echo "server is now listening for calls on port: ".$config['port'];
 $loop->run();
+
