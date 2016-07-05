@@ -46,7 +46,8 @@ try {
     $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path));
 
     $headers = array('Access-Control-Allow-Origin' => $config['corsOrigin'],
-        'Content-Type' => $guzzleResponse->getHeaderLine('content-type'));
+        'Content-Type' => $guzzleResponse->getHeaderLine('content-type')
+    ,$request->getHeaders());
 
     $response->writeHead($guzzleResponse->getStatusCode(), $headers);
     $response->end($guzzleResponse->getBody());
