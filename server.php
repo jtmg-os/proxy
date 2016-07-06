@@ -52,7 +52,7 @@ $app = function (Request $request, Response $response) {
         $response->end($guzzleResponse->getBody());
 
 } catch (\Exception $e) {
-echo "\nError: ".$e->getMessage();
+    echo "\nError: ".$e->getMessage();
 }
 
 };
