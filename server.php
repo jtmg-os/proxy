@@ -41,7 +41,7 @@ $app = function (Request $request, Response $response) {
             . http_build_query($query);
     }
 
-try {
+    try {
     $guzzleClient = new Client();
         $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path), $request->getHeaders());
 
