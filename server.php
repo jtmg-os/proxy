@@ -51,7 +51,7 @@ $app = function (Request $request, Response $response) {
         $response->writeHead($guzzleResponse->getStatusCode(), $headers);
         $response->end($guzzleResponse->getBody());
 
-} catch (\Exception $e) {
+    } catch (\Exception $e) {
     echo "\nError: ".$e->getMessage();
 }
 
