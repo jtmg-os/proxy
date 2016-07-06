@@ -49,7 +49,7 @@ $app = function (Request $request, Response $response) {
         $headers['Access-Control-Allow-Origin'] = $config['corsOrigin'];
 
         $response->writeHead($guzzleResponse->getStatusCode(), $headers);
-    $response->end($guzzleResponse->getBody());
+        $response->end($guzzleResponse->getBody());
 
 } catch (\Exception $e) {
 echo "\nError: ".$e->getMessage();
