@@ -43,13 +43,10 @@ $app = function (Request $request, Response $response) {
 
 try {
     $guzzleClient = new Client();
-    $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path));
+    $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path), $request->getHeaders());
 
-    $headers = array('Access-Control-Allow-Origin' => $config['corsOrigin'],
-        'Content-Type' => $guzzleResponse->getHeaderLine('content-type')
-    );
-
-    $headers = array_merge($headers, $request->getHeaders());
+    $headers = $guzzleResponse->getHeaders();
+    $headers['Access-Control-Allow-Origin'] = $config['corsOrigin'];
 
     $response->writeHead($guzzleResponse->getStatusCode(), $headers);
     $response->end($guzzleResponse->getBody());
