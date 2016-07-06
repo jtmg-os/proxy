@@ -53,7 +53,7 @@ $app = function (Request $request, Response $response) {
 
     } catch (\Exception $e) {
     echo "\nError: ".$e->getMessage();
-}
+    }
 
 };
 
