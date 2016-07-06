@@ -42,7 +42,7 @@ $app = function (Request $request, Response $response) {
     }
 
     try {
-    $guzzleClient = new Client();
+        $guzzleClient = new Client();
         $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path), $request->getHeaders());
 
         $headers = $guzzleResponse->getHeaders();
