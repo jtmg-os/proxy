@@ -43,7 +43,7 @@ $app = function (Request $request, Response $response) {
 
     try {
         $guzzleClient = new Client();
-        $guzzleResponse = $guzzleClient->request($request->getMethod(), urldecode($path), $request->getHeaders());
+        $guzzleResponse = $guzzleClient->request($request->getMethod(), $path, $request->getHeaders());
 
         $headers = $guzzleResponse->getHeaders();
         $headers['Access-Control-Allow-Origin'] = $config['corsOrigin'];
