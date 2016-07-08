@@ -2,10 +2,10 @@
     "name": "jtrefon/phpproxy",
     "description": "Proxy server written in PHP to locally bypass CORS issue in development",
     "require": {
-        "guzzlehttp/guzzle": "dev-master",
+        "guzzlehttp/guzzle": "~3.0",
         "react/react": "^0.4.2"
     },
-    "license": "GPL-3",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "Jacek Trefon",
