@@ -1,9 +1,12 @@
 language: php
-
+sudo: required
+dist: trusty
+group: edge
 php:
   - 7.0
 
 before_script:
+- sudo apt-get install -y screen
 - make install
 - cp config.php.dist config.php
 - screen php server.php
