@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP based Proxy
+ * PHP based Proxy.
  *
  * This is small but fast and simple proxy server
  * based on React and Guzzle, use and modify / contribute at will
@@ -10,13 +10,9 @@
  *
  * @category Proxy
  *
- * @package Server
- *
  * @copyright 2016 Jack Trefon Media Group
- *
- * @author Jacek Trefon <jack@trefon.com>
- *
- * @license GPL-3 https://www.gnu.org/licenses/gpl-3.0.en.html
+ * @author    Jacek Trefon <jack@trefon.com>
+ * @license   GPL-3 https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * @link https://github.com/jtrefon
  */
@@ -65,5 +61,5 @@ $http   = new HttpServer($socket);
 $http->on('request', $app);
 $config = include 'config.php';
 $socket->listen($config['port']);
-echo "server is now listening for calls on port: ".$config['port'];
+echo 'server is now listening for calls on port: '.$config['port'];
 $loop->run();

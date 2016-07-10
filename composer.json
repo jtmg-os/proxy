@@ -2,13 +2,15 @@
     "name": "jtrefon/phpproxy",
     "description": "Proxy server written in PHP to locally bypass CORS issue in development",
     "require": {
-        "guzzlehttp/guzzle": "master",
+        "guzzlehttp/guzzle": "@stable",
         "react/react": "^0.4.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.0",
         "phpmd/phpmd" : "@stable",
-        "squizlabs/php_codesniffer": "2.*"
+        "squizlabs/php_codesniffer": "2.*",
+        "friendsofphp/php-cs-fixer": "@stable",
+        "sebastian/phpcpd": "@stable"
     },
     "license": "GPL-3.0",
     "authors": [
