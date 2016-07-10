@@ -19,6 +19,6 @@ cache:
 before_script:
 - make install
 - cp config.php.dist config.php
-- php server.php
+- screen php server.php
 script:
 - phpunit --testsuite $TEST_SUITE --stop-on-error --stop-on-failure -d memory_limit=2560M
