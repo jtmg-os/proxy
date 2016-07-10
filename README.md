@@ -3,6 +3,7 @@ PHP based URI proxy
 ###Status
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6ab12c647154b61bf6ef18fcfdbd252)](https://www.codacy.com/app/j-trefon/proxy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jtmg-os/proxy&amp;utm_campaign=Badge_Grade)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/7490a8ab-c205-433d-858b-1cd8860f9a15/mini.png)](https://insight.sensiolabs.com/projects/7490a8ab-c205-433d-858b-1cd8860f9a15)
+[![Build Status](https://travis-ci.org/jtmg-os/proxy.svg?branch=master)](https://travis-ci.org/jtmg-os/proxy)
 
 # What
 It's a simple local proxy server to avoid CORS issues while developing locally, should work out of the box ;)
