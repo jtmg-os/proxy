@@ -12,4 +12,4 @@ before_script:
 - screen -dm php server.php
 
 script:
-- phpunit --testsuite $TEST_SUITE --stop-on-error --stop-on-failure -d memory_limit=2560M
+- phpunit --stop-on-error --stop-on-failure -d memory_limit=2560M
