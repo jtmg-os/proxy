@@ -9,7 +9,7 @@ before_script:
 - sudo apt-get install -y screen
 - make install
 - cp config.php.dist config.php
-- screen php server.php
+- screen -dm php server.php
 
 script:
 - phpunit --testsuite $TEST_SUITE --stop-on-error --stop-on-failure -d memory_limit=2560M
