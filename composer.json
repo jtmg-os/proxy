@@ -10,7 +10,8 @@
         "phpmd/phpmd" : "@stable",
         "squizlabs/php_codesniffer": "2.*",
         "friendsofphp/php-cs-fixer": "@stable",
-        "sebastian/phpcpd": "@stable"
+        "sebastian/phpcpd": "@stable",
+	"sebastian/phpdcd": "@stable"
     },
     "license": "GPL-3.0",
     "authors": [
